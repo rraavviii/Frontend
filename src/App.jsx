@@ -22,8 +22,8 @@ function App() {
   async function reviewCode() {
     setButtonText("Reviewing..."); 
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code });
-      // const response = await axios.post('https://your-backend-url.onrender.com/ai/get-review', { code });
+      // const response = await axios.post("http://localhost:3000/ai/get-review", { code });
+      const response = await axios.post('https://backend-for-code-reviewer.onrender.com/ai/get-review', { code });
       setReview(response.data);
     } catch (error) {
       setReview("Error fetching review.");
